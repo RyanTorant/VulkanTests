@@ -1,0 +1,6 @@
+.vs/ 
+*.db
+*.opendb
+*.pdb
+*.obj
+*.tlog
