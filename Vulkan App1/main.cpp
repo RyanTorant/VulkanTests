@@ -581,7 +581,7 @@ VkShaderModule createShaderModule(DeviceQueues& queues, const vector<char>& code
 	createInfo.pCode = (uint32_t*)code.data();
 
 	VkShaderModule shaderModule;
-	ASSERT_R(vkCreateShaderModule(queues.LogicalDevice, &createInfo, nullptr, &shaderModule) != VK_SUCCESS, Severity::CriticalError, nullptr);
+	ASSERT_R(vkCreateShaderModule(queues.LogicalDevice, &createInfo, nullptr, &shaderModule) == VK_SUCCESS, Severity::CriticalError, nullptr);
 
 	return shaderModule;
 }
